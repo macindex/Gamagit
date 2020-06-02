@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import * as S from './styledHome';
 import { useHistory } from 'react-router-dom';
+import './style.css';
 
 function App(props) {
   const history = useHistory();
@@ -22,7 +23,7 @@ function handlePesquisa(){
   return (
     <S.HomeContainer>
     <S.Input className="usuarioInput" placeholder="Usuário" value={usuario} onChange={e => setUsuario(e.target.value)} />
-    <S.Button type="button" onClick={handlePesquisa}>Pesquisar</S.Button>
+    <S.Button className="panel-danger" type="button" onClick={handlePesquisa}>Pesquisar</S.Button>
     </S.HomeContainer>
   );
 }
